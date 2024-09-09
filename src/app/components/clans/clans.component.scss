@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "font_ninja_naruto";
+    src: url("../../fonts/njnaruto.ttf");
+  }
+  
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  
+    .contenedor {
+      background: rgba(31, 41, 55);
+      .container_img {
+        width: 98.9vw;
+        height: 50vh;
+        opacity: 0.4;
+        object-fit: cover;
+      }
+      .centrado {
+        text-align: center;
+        font-family: "font_ninja_naruto", Geneva, Verdana, sans-serif;
+        position: absolute;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        font-size: 4rem;
+        transform: translate(-50%, -50%);
+      }
+    }
+  
+    .characters_card {
+      margin: 5rem 0 1rem 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+  
+    .example-card {
+      box-shadow: 4px 4px 4px #aeaec0, -4px -4px 4px #fff;
+      align-items: center;
+      cursor: pointer;
+      .example-card-img {
+        padding: 1rem;
+        width: 17rem;
+        height: 17rem;
+        object-fit: cover;
+      }
+      .example-card-title {
+        font-family: "font_ninja_naruto", Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+      }
+    }
+    .example-card:hover {
+      box-shadow: 5px 5px 30px #aeaec0, -10px -10px 20px #fff;
+      color: #f98704;
+    }
+  }
+  

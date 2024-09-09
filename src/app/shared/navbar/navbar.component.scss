@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "font_ninja_naruto";
+  src: url("../../fonts/njnaruto.ttf");
+}
+
+.toolbar {
+  background-color: black;
+  .toolbar__title {
+    color: #f98704;
+    font-size: 2rem;
+    font-family: "font_ninja_naruto", Geneva, Verdana, sans-serif;
+  }
+  .toolbar__title:hover {
+    color: #a53504;
+    cursor: pointer;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+}
+
+.subtitles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  background-color: rgba(8, 8, 8);
+  color: #f98704;
+  font-family: "font_ninja_naruto", Geneva, Verdana, sans-serif;
+}
+.subtitles > span:hover {
+  cursor: pointer;
+  color: #a53504;
+}

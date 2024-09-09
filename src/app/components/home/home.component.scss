@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "font_ninja_naruto";
+  src: url("../../fonts/njnaruto.ttf");
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.content1 {
+  background-color: #f98704;
+  height: 50vh;
+  .content1,
+  #ngb-carousel {
+    text-align: center;
+    .content1,
+    #img {
+      height: 50vh;
+      width: 85dvw;
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.content2 {
+  display: flex;
+  text-align: center;
+  background-color: #111111;
+  justify-content: center;
+  cursor: pointer;
+  height: auto;
+  flex-wrap: wrap;
+  .example-card {
+    max-width: 300px;
+    margin: 2rem;
+    background-color: #111111;
+    box-shadow: 4px 4px 4px rgb(8, 8, 8), -4px -4px 4px rgb(8, 8, 8);
+  }
+  .title-card {
+    font-family: "font_ninja_naruto", Geneva, Verdana, sans-serif;
+    color: #f98704;
+    padding: 2rem 0 0 0;
+  }
+  .title-card:hover {
+    color: #f98704;
+    color: #a53504;
+  }
+
+  .example-card:hover {
+    box-shadow: 4px 4px 4px rgb(12, 12, 12), -4px -4px 4px rgb(12, 12, 12);
+    color: #a53504;
+    padding: 10px;
+  }
+
+  .example-header-image {
+    background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+    background-size: cover;
+  }
+}
+
+.example-container {
+  background-color: #111111;
+}
