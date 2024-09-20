@@ -5,10 +5,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ApiService } from '../../services/api.service';
-import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-kekkei-genkai',
+  selector: 'app-kara',
   standalone: true,
   imports: [
     MatCardModule,
@@ -16,23 +15,25 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
-    RouterModule
   ],
-  templateUrl: './kekkei-genkai.component.html',
-  styleUrl: './kekkei-genkai.component.scss',
+  templateUrl: './kara.component.html',
+  styleUrl: './kara.component.scss',
 })
-export class KekkeiGenkaiComponent {
-  dataSource: any[] = [];
+export class KaraComponent {
   params = {} as any;
+  page = 0;
+  pageSize = 20;
+  dataSource: any[] = [];
   constructor(private service: ApiService) {}
 
-  public ngOnInit() {
-    this.GetAllKekkei();
+  ngOnInit() {
+    this.getData();
   }
 
-  public GetAllKekkei() {
-    this.service.getAllGenkai(this.params).subscribe((res) => {
-      this.dataSource = res.kekkeigenkai;      
+  public getData(): void {
+    this.service.getAllKara(this.params).subscribe((res) => {
+      const { kara } = res;
+      this.dataSource = kara;
     });
   }
 }

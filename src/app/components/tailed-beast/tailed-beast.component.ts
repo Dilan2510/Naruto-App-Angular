@@ -4,11 +4,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { ApiService } from '../../services/api.service';
 import { RouterModule } from '@angular/router';
+import { ApiService } from '../../services/api.service';
 
 @Component({
-  selector: 'app-kekkei-genkai',
+  selector: 'app-tailed-beast',
   standalone: true,
   imports: [
     MatCardModule,
@@ -16,23 +16,24 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
-    RouterModule
+    RouterModule,
   ],
-  templateUrl: './kekkei-genkai.component.html',
-  styleUrl: './kekkei-genkai.component.scss',
+  templateUrl: './tailed-beast.component.html',
+  styleUrl: './tailed-beast.component.scss',
 })
-export class KekkeiGenkaiComponent {
-  dataSource: any[] = [];
-  params = {} as any;
+export class TailedBeastComponent {
+  public dataSource: any[] = [];
+  public params = [] as any;
+
   constructor(private service: ApiService) {}
 
   public ngOnInit() {
-    this.GetAllKekkei();
+    this.GetAllBeast();
   }
 
-  public GetAllKekkei() {
-    this.service.getAllGenkai(this.params).subscribe((res) => {
-      this.dataSource = res.kekkeigenkai;      
+  public GetAllBeast() {
+    this.service.getAllBeast(this.params).subscribe((res) => {
+      this.dataSource = res.tailedBeasts;
     });
   }
 }

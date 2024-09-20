@@ -2,13 +2,17 @@
   <div class="contenedor">
     <img
       class="container_img"
-      src="https://narutodb.xyz/cards/kekkeigenkai.avif"
+      src="https://narutodb.xyz/cards/teams.webp"
     />
-    <div class="centrado">Naruto Multiverso Kekkei-genkai</div>
+    <div class="centrado">Naruto Multiverso Teams</div>
   </div>
   <div></div>
   <div class="characters_card">
-    <mat-card class="example-card" *ngFor="let item of dataSource" [routerLink]="[item.id]" >
+    <mat-card
+      class="example-card"
+      *ngFor="let item of dataSource"
+      [routerLink]="[item.id]"
+    >
       <mat-card-content>
         <mat-card-title class="example-card-title">{{
           item.name
@@ -16,4 +20,6 @@
       </mat-card-content>
     </mat-card>
   </div>
+  <mat-paginator (page)="handlePageEvent($event)" [length]="20" [pageSize]="20">
+  </mat-paginator>
 </div>

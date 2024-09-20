@@ -104,7 +104,11 @@
       />
       <mat-card-title class="title-card">Kekkei Genkai</mat-card-title>
     </mat-card>
-    <mat-card class="example-card" appearance="outlined">
+    <mat-card
+      class="example-card"
+      appearance="outlined"
+      [routerLink]="['/tailed-beast']"
+    >
       <img
         style="max-height: 65%"
         mat-card-image
@@ -113,7 +117,7 @@
       />
       <mat-card-title class="title-card">Tailed-Beast</mat-card-title>
     </mat-card>
-    <mat-card class="example-card" appearance="outlined">
+    <mat-card class="example-card" appearance="outlined" [routerLink]="['/teams']">
       <img
         id="title-card"
         mat-card-image
@@ -122,7 +126,7 @@
       />
       <mat-card-title class="title-card">Teams</mat-card-title>
     </mat-card>
-    <mat-card class="example-card" appearance="outlined">
+    <mat-card class="example-card" appearance="outlined" [routerLink]="['/kara']">
       <img
         id="title-card"
         mat-card-image
@@ -131,7 +135,7 @@
       />
       <mat-card-title class="title-card">Kara</mat-card-title>
     </mat-card>
-    <mat-card class="example-card" appearance="outlined">
+    <mat-card class="example-card" appearance="outlined" [routerLink]="['/akatsuki']">
       <img
         id="title-card"
         mat-card-image
