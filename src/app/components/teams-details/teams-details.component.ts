@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-teams-details',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, CommonModule, MatPaginatorModule],
+  imports: [MatCardModule, MatButtonModule, CommonModule, MatPaginatorModule, RouterModule],
   templateUrl: './teams-details.component.html',
   styleUrl: './teams-details.component.scss',
 })

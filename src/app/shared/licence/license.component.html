@@ -1,0 +1,56 @@
+<div class="container">
+  <mat-card
+    class="example-card"
+    appearance="outlined"
+    *ngFor="let item of dataSource"
+  >
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title class="example-card-title">{{
+          item.name
+        }}</mat-card-title>
+        <mat-card-subtitle class="example-card-subtitle"
+          >AFFILIATION:
+          <span>{{ item.personal.affiliation }}</span></mat-card-subtitle
+        >
+        <mat-card-subtitle class="example-card-subtitle"
+          >CLAN: <span>{{ item.personal.clan }}</span></mat-card-subtitle
+        >
+        <mat-card-subtitle class="example-card-subtitle"
+          >SEX: <span>{{ item.personal.sex }}</span></mat-card-subtitle
+        >
+        <mat-card-subtitle class="example-card-subtitle"
+          >STATUS: <span>{{ item.personal.status }}</span></mat-card-subtitle
+        >
+        <mat-card-subtitle class="example-card-subtitle"
+          >TEAM: <span>{{ item.personal.team }}</span></mat-card-subtitle
+        >
+        <mat-card-subtitle class="example-card-subtitle"
+          >JUTSU: <span>{{ item.jutsu }}</span></mat-card-subtitle
+        >
+        <!-- <mat-card-subtitle class="example-card-subtitle"
+          >AGE:
+          <span *ngFor="let color of dataSource2; let i = index">{{
+            color
+          }}</span></mat-card-subtitle -->
+        >
+      </mat-card-title-group>
+      <img class="mat-card-img" mat-card-xl-image src="{{ item.images }}" />
+    </mat-card-header>
+    <h6 style="margin-left: 1rem">Debut</h6>
+    <mat-card-content class="mat-card-cont">
+      <p>
+        MANGA: <span>{{ item.debut.manga }}</span>
+      </p>
+      <p>
+        ANIME: <span>{{ item.debut.anime }}</span>
+      </p>
+      <p>
+        MOVIE: <span>{{ item.debut.movie }}</span>
+      </p>
+      <p>
+        APPEARSIN: <span>{{ item.debut.appearsIn }}</span>
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

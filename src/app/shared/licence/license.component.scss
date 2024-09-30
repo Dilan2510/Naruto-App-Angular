@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "font_ninja_naruto";
+  src: url("../../fonts/njnaruto.ttf");
+}
+
+.container {
+  padding: 3rem 0;
+  .example-card {
+    max-width: 100%;
+    box-shadow: 4px 4px 4px #aeaec0, -4px -4px 4px #aeaec0;
+    .mat-card-img {
+      border: #f98704;
+    }
+    .example-card-title {
+      text-align: center;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 2rem;
+      padding: 1rem 0;
+    }
+    .example-card-subtitle {
+      font-size: 20px;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      color: #f98704;
+    }
+    .example-card-subtitle > span {
+      color: black;
+      font-size: 1rem;
+    }
+    .mat-card-cont {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 16px;
+    }
+    .mat-card-cont > p {
+      color: #f98704;
+      font-size: 18px;
+    }
+    .mat-card-cont > p > span {
+      color: black;
+      font-size: 1rem;
+    }
+  }
+  .example-card:hover {
+    // box-shadow: 5px 5px 30px #aeaec0, -10px -10px 20px #fff;
+    // color: #f98704;
+  }
+}

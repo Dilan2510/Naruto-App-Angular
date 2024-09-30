@@ -24,7 +24,6 @@ import { RouterModule } from '@angular/router';
 export class ClansComponent {
   params = {} as any;
   page = 0;
-  pageSize = 0;
   dataSource: any[] = [];
 
   constructor(private service: ApiService) {}
@@ -33,7 +32,7 @@ export class ClansComponent {
     this.getData();
   }
 
-  public getRequestParams(page: number, pageSize: number): any {
+  public getRequestParams(page: number): any {
     if (page) {
       this.params[`page`] = page + 1;
     } else {
@@ -43,7 +42,7 @@ export class ClansComponent {
   }
 
   public getData(): void {
-    this.params = this.getRequestParams(this.page, this.pageSize);
+    this.params = this.getRequestParams(this.page);
     this.service.getAllClans(this.params).subscribe((res) => {
       const { clans } = res;
       this, (this.dataSource = clans);
@@ -52,7 +51,6 @@ export class ClansComponent {
 
   public HandlePgeEvent(event: any) {
     this.page = event.pageIndex;
-    this.pageSize = event.pageSize;
     this.getData();
   }
 }

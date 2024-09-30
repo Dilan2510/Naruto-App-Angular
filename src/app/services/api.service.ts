@@ -14,6 +14,9 @@ export class ApiService {
       params,
     });
   }
+  public getAllCharactersById(id: string): Observable<any> {
+    return this.http.get('https://narutodb.xyz/api/character/' + id);
+  }
   // CONSUMO API DE CLANES
   public getAllClans(params: any): Observable<any> {
     return this.http.get('https://narutodb.xyz/api/clan', {

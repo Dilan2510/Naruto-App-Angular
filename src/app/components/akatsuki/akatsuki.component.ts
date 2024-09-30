@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-akatsuki',
@@ -15,6 +16,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CommonModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
+    RouterModule
   ],
   templateUrl: './akatsuki.component.html',
   styleUrl: './akatsuki.component.scss',

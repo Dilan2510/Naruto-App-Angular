@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ApiService } from '../../services/api.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-characters',
@@ -14,6 +15,7 @@ import { ApiService } from '../../services/api.service';
     MatButtonModule,
     CommonModule,
     MatPaginatorModule,
+    RouterModule,
     MatProgressSpinnerModule,
   ],
   templateUrl: './characters.component.html',
